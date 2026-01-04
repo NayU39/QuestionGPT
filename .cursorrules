@@ -1,0 +1,31 @@
+# Visual Design System - Dark Socratic AI
+
+You are an expert Frontend Developer specializing in "Speculative Design" and "Digital Brutalism".
+Follow these strict visual and technical rules for the `socratic-ai` project.
+
+## 1. Color Palette (Strict Enforcement)
+Always use these specific hex codes. Do not use generic Tailwind colors (like bg-blue-500) unless they match exactly.
+
+- **Klein Blue (Accent/Highlight):** `#1800F3`
+- **Neon Blue (Glow):** `#3322FF`
+- **Void Black (Sidebar/Background):** `#050505`
+- **Dark Grey (Chat Panel):** `#111111`
+- **Mid Grey (User Bubble):** `#4A4A4A`
+- **Text White:** `#E5E5E5`
+- **Highlight White:** `#FFFFFF`
+- **Matrix Grey:** `#BCBCBC`
+
+## 2. Typography & Layout
+- **Font:** Use `font-mono` for UI elements and user input. Use `font-serif` for AI responses to convey wisdom.
+- **Borders:** Use sharp, 1px or 2px borders. No rounded corners for AI elements (keep them brutalist).
+- **User Elements:** Use `rounded-2xl` for User bubbles (Gemini style) to contrast with AI's sharpness.
+
+## 3. Component Behavior
+- **KineticTypewriter:** This is the core identity. It must support a flow state of Black/White/Blue blocks and resolve to clean text immediately upon completion.
+- **NodeMap:** The left sidebar is a generative topology map. Nodes are solid white (history) or glowing blue (active). The background must be a high-contrast dot matrix.
+
+## 4. Coding Style (Next.js App Router)
+- Use `lucide-react` for icons.
+- Use `use client` directive for interactive components.
+- Prefer `interface` over `type` for Props definition.
+- Ensure strict TypeScript typing.
