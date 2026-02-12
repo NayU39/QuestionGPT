@@ -1207,7 +1207,7 @@ export default function Home() {
           </form>
           <div className="mt-2 text-center">
             <p className="text-[10px] text-[#666666] uppercase tracking-[0.2em]">
-              Interaction Design Coursework © 2024
+              Produced by ZiruiHuang
             </p>
           </div>
         </footer>
