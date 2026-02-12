@@ -395,7 +395,7 @@ const WelcomeOverlay = ({ isStarted, inputValue, setInputValue, handleSend, isTh
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="在此输入你的启动语句..."
+            placeholder="请输入你的问题"
             className="block w-full pl-12 pr-12 py-3 bg-[#F9F9F9] border border-[#E5E5E5] text-[#1A1A1A] placeholder-[#666666] focus:outline-none focus:border-[#1800F3] focus:ring-0 text-lg transition-all font-mono rounded-xl"
             autoFocus
           />
@@ -1171,7 +1171,7 @@ export default function Home() {
                 disabled={selectedMessageIds.size === 0}
                 className="px-4 py-1.5 text-[#1A1A1A] font-mono text-xs hover:text-[#1800F3] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                [合成卡片]
+                [归档]
               </button>
               <button
                 onClick={handleCancelSelection}
