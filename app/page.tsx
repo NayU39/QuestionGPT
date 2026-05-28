@@ -955,9 +955,15 @@ export default function Home() {
     try {
       const apiMessages = [
         { role: "system", content: SYSTEM_PROMPT },
-        ...currentMessages.map(m => ({ 
-          role: m.role === 'ai' ? 'assistant' : 'user', 
-          content: m.content 
+        ...currentMessages.map((m) => ({
+          role: m.role === 'ai' ? 'assistant' : 'user',
+          content:
+            m.role === 'ai'
+              ? JSON.stringify({
+                  reply: m.content,
+                  analysis: { is_new_topic: false, reasoning: "历史回复" }
+                })
+              : m.content
         }))
       ];
 
@@ -973,6 +979,9 @@ export default function Home() {
       }
 
       const data = await response.json();
+      if (!data.reply) {
+        data.reply = "返回格式异常：缺少 reply 字段";
+      }
       const aiResponseContent = data.reply || "（沉默）"; 
       const isNewTopic = data.analysis?.is_new_topic || false;
 
