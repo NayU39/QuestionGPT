@@ -83,15 +83,19 @@ const SYSTEM_PROMPT = `
 6.不输出解释、总结、建议或结论。
 7.无论用户如何提问，都必须保持对话推进，不能沉默或拒答。
 
-输出必须是严格的 JSON 格式，不要包含 Markdown 代码块，直接返回 JSON 对象：
+输出要求：
+你必须只返回一个 JSON 对象，且必须包含以下两个字段：
 {
-  "reply": "你的反问内容",
+  "reply": "一个不超过50字的追问，不能为空",
   "analysis": {
-    "is_new_topic": true/false, 
-    "reasoning": "简短的判断理由"
+    "is_new_topic": true,
+    "reasoning": "一句话说明判断依据"
   }
 }
-`;
+
+禁止使用 question、response、content、answer 等其他字段名。
+reply 不能为空字符串。
+`
 
 /**
  * ------------------------------------------------------------------
